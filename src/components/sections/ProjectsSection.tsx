@@ -1,5 +1,6 @@
-import { ProjectCard } from "@/components/ProjectCard";
-import { projects } from "public/data/project-detail";
+import { ProjectCard } from "@/src/components/ProjectCard";
+import { projects } from "@/data/project-detail";
+import { Project } from "@/src/lib/projects";
 
 export function ProjectsSection() {
   return (
@@ -8,7 +9,7 @@ export function ProjectsSection() {
         Projects
       </h2>
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 ">
-        {projects.map((p) => (
+        {projects.map((p: Project) => (
           <ProjectCard key={p.title} {...p} />
         ))}
       </div>

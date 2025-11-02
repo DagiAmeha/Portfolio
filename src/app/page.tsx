@@ -1,8 +1,8 @@
 "use client";
 
-import { AnimatedPage } from "@/components/AnimatedPage";
-import { LazySection } from "@/components/LazySection";
-import { FooterSection } from "@/components/sections/FooterSection";
+import { AnimatedPage } from "@/src/components/AnimatedPage";
+import { LazySection } from "@/src/components/LazySection";
+import { FooterSection } from "@/src/components/sections/FooterSection";
 
 export default function LandingPage() {
   return (
@@ -10,7 +10,7 @@ export default function LandingPage() {
       <LazySection
         id="home"
         importFn={() =>
-          import("@/components/sections/HeroSection").then((m) => ({
+          import("@/src/components/sections/HeroSection").then((m) => ({
             default: m.HeroSection,
           }))
         }
@@ -23,7 +23,7 @@ export default function LandingPage() {
       <LazySection
         id="about"
         importFn={() =>
-          import("@/components/sections/AboutSection").then((m) => ({
+          import("@/src/components/sections/AboutSection").then((m) => ({
             default: m.AboutSection,
           }))
         }
@@ -34,7 +34,7 @@ export default function LandingPage() {
       <LazySection
         id="projects"
         importFn={() =>
-          import("@/components/sections/ProjectsSection").then((m) => ({
+          import("@/src/components/sections/ProjectsSection").then((m) => ({
             default: m.ProjectsSection,
           }))
         }
@@ -45,7 +45,7 @@ export default function LandingPage() {
       <LazySection
         id="contact"
         importFn={() =>
-          import("@/components/sections/ContactSection").then((m) => ({
+          import("@/src/components/sections/ContactSection").then((m) => ({
             default: m.ContactSection,
           }))
         }

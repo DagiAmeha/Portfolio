@@ -29,7 +29,7 @@ export const projects = [
   {
     title: "Chat Bot Application",
     description:
-      "A general-purpose chatbot supporting text and image upload functionality, integrated with the Gemini API for AI-powered responses.",
+      "A chatbot supporting text and image upload functionality, integrated with Gemini API for AI-powered responses.",
     image: "/img/chat-bot.jpg",
     github: "https://github.com/DagiAmeha/Chat-bot-with-Gemini-api",
     demo: "https://youtube.com/shorts/nqZrIdyZ014?si=ZCbDmyX2rj5vKbTb",
