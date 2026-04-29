@@ -12,7 +12,7 @@ export const projects = [
      title: "Church Management & Engagement Platform",
     description:
       "A full-featured digital platform for Mission for Nation Church, enabling member registration, online donations, sermon streaming, and book purchasing in one unified system.",
-    image: "/img/M4N.jpg",
+    image: "/img/M4N.png",
     github: "https://github.com/nathanaelcheramlak/church-backend",
     demo: "https://youtube.com/shorts/oMOzxshmn7E?feature=share",
     tags: ["Flutter", "Express.js", "MongoDB", "Chappa"],
