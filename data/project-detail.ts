@@ -9,6 +9,16 @@ export const projects = [
     tags: ["Node.js", "pug", "Express", "MongoDB", "Stripe"],
   },
   {
+     title: "Church Management & Engagement Platform",
+    description:
+      "A full-featured digital platform for Mission for Nation Church, enabling member registration, online donations, sermon streaming, and book purchasing in one unified system.",
+    image: "/img/food-project.jpg",
+    github: "https://github.com/nathanaelcheramlak/church-backend",
+    demo: "https://youtube.com/shorts/oMOzxshmn7E?feature=share",
+    tags: ["Flutter", "Express.js", "MongoDB", "Chappa"],
+  }  
+  ,
+  {
     title: "Recipe Search & Sharing Website",
     description:
       "A recipe platform allowing users to search through over 1,000,000 recipes and add their own creations.",
