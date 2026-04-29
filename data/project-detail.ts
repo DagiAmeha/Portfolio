@@ -46,13 +46,4 @@ export const projects = [
     tags: ["Flutter", "Gemini API "],
   },
 
-  {
-    title: "Command Line App",
-    description:
-      "A command-line application that displays system information about the computer.",
-    image: "/img/cli-app.jpg",
-    github: "https://github.com/DagiAmeha/CLI-app",
-    demo: "https://github.com/DagiAmeha/CLI-app",
-    tags: ["Node.js"],
-  },
 ];
