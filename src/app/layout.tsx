@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { BackgroundCanvas } from "@/src/components/BackgroundCanvas";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -49,6 +50,9 @@ export default function RootLayout({
                      from-cyan-400/10 via-[#09090B] to-[#09090B]
                      pointer-events-none"
         />
+
+        {/* 3D Global Canvas Background */}
+        <BackgroundCanvas />
 
         {/* Content */}
         <main className="relative z-10 container">{children}</main>

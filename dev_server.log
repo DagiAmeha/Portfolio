@@ -1,0 +1,22 @@
+
+> portfolio-web@0.1.0 dev
+> next dev
+
+  ▲ Next.js 14.2.32
+  - Local:        http://localhost:3000
+  - Experiments (use with caution):
+    · typedRoutes
+
+ ✓ Starting...
+ ✓ Ready in 1723ms
+ ○ Compiling / ...
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+Browserslist: browsers data (caniuse-lite) is 10 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+ ✓ Compiled / in 19.7s (2399 modules)
+ GET / 200 in 20824ms
+ ✓ Compiled in 1163ms (2390 modules)
+ ✓ Compiled in 538ms (2390 modules)
+ ✓ Compiled in 1398ms (2390 modules)
+ ✓ Compiled in 579ms (2390 modules)

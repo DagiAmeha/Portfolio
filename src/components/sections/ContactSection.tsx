@@ -2,6 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, MessageCircleMore, Send } from "lucide-react";
+import { Canvas } from "@react-three/fiber";
+import { Contact3DElement } from "@/src/components/Contact3DElement";
 
 export function ContactSection() {
   const contactLinks = [
@@ -31,9 +33,17 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className="py-20 min-h-screen flex flex-col items-center justify-center px-6 "
+      className="relative py-20 min-h-screen flex flex-col items-center justify-center px-6 "
     >
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
+        <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
+          <ambientLight intensity={0.5} />
+          <directionalLight position={[10, 10, 5]} intensity={1} />
+          <Contact3DElement />
+        </Canvas>
+      </div>
+
+      <div className="max-w-4xl mx-auto text-center relative z-10">
         {/* Section Title */}
         <motion.h2
           className="text-4xl md:text-5xl mb-12 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-white"

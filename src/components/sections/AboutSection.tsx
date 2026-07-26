@@ -2,6 +2,10 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { Canvas } from "@react-three/fiber";
+import { ScrollControls, Scroll } from "@react-three/drei";
+import { About3DElement } from "@/src/components/About3DElement";
+import { SkillsCloud } from "@/src/components/SkillsCloud";
 
 export function AboutSection() {
   const { ref, inView } = useInView({
@@ -28,8 +32,16 @@ export function AboutSection() {
     <section
       ref={ref}
       id="about"
-      className="max-w-4xl mx-auto py-32 flex flex-col items-center justify-center min-h-screen text-gray-100"
+      className="relative max-w-4xl mx-auto py-32 flex flex-col items-center justify-center min-h-screen text-gray-100"
     >
+      <div className="absolute inset-0 z-0 opacity-30 pointer-events-none">
+        <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
+          <ambientLight intensity={0.5} />
+          <directionalLight position={[10, 10, 5]} intensity={1} />
+          <About3DElement />
+        </Canvas>
+      </div>
+
       <motion.div
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
@@ -119,28 +131,14 @@ export function AboutSection() {
         </div>
 
         {/* Skills */}
-        <div className="mt-6 w-full">
-          <h3 className="font-bold text-xl mb-4">Skills</h3>
-          <motion.ul
-            className="flex gap-2 text-sm flex-wrap"
-            variants={{
-              hidden: {},
-              visible: { transition: { staggerChildren: 0.05 } },
-            }}
-          >
-            {skills.map((skill) => (
-              <motion.li
-                key={skill}
-                className="rounded-full border border-white/20 px-4 py-2 bg-white/5 hover:bg-white/10 transition"
-                variants={{
-                  hidden: { opacity: 0, y: 20 },
-                  visible: { opacity: 1, y: 0 },
-                }}
-              >
-                {skill}
-              </motion.li>
-            ))}
-          </motion.ul>
+        <div className="mt-6 w-full flex flex-col items-center">
+          <h3 className="font-bold text-xl mb-4 self-start">Skills</h3>
+          <div className="w-full h-80 relative cursor-move">
+            <Canvas camera={{ position: [0, 0, 6], fov: 60 }} className="z-10">
+              <ambientLight intensity={0.5} />
+              <SkillsCloud skills={skills} />
+            </Canvas>
+          </div>
         </div>
       </motion.div>
     </section>
