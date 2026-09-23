@@ -24,7 +24,7 @@ export const projects = [
       "A recipe platform allowing users to search through over 1,000,000 recipes and add their own creations.",
     image: "/img/food-project.jpg",
     github: "https://github.com/DagiAmeha/forkify-app",
-    demo: "https://forkify-dagim.netlify.app",
+    demo: "https://forkify-app-alpha.vercel.app/",
     tags: ["HTML", "Sass", "Java Script"],
   },
   {
